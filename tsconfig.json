@@ -1,0 +1,101 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"],
+    "types": ["node", "jest"],
+    "paths": {
+      "src/*": ["src/*"],
+      "client/*": ["src/client/*"],
+      "node/*": ["src/node/*"],
+      "shared/*": ["src/shared/*"],
+      "tests/*": ["__tests__/*"],
+      "/@shared/*": ["src/client/shared/*"],
+      "/@types/*": ["types/*"],
+      "vitepress": ["src/client/index.ts"]
+    }
+  },
+  "include": [
+    "src",
+    "__tests__"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+// {
+//   "compilerOptions": {
+//     /* 基本选项 */
+//     // "incremental": true,                         /* 启用增量编译 */
+//     "target": "es5" /* 指定ECMAScript目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */,
+//     "module": "commonjs" /* 指定要使用的模块标准: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
+//     // "lib": [],                                   /* 指定要包含在编译中的库文件 */
+//     // "allowJs": true,                             /* 指定是否允许编译JS文件，默认false,即不编译JS文件 */
+//     // "checkJs": true,                             /* 指定是否检查和报告JS文件中的错误，默认false */
+//     // "jsx": "preserve",                           /* 指定jsx代码用于的开发环境: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */
+//     // "declaration": true,                         /* 生成相应的“.d.ts”声明文件，但是declaration和allowJs不能同时设为true*/
+//     // "declarationMap": true,                      /* 为每个相应的“.d.ts”文件生成源映射 */
+//     // "sourceMap": true,                           /* 指定编译时是否生成.map文件 */
+//     // "outFile": "./",                             /* 指定输出文件合并为一个文件，只有设置module的值为amd和system模块时才支持这个配置 */
+//     // "outDir": "./",                              /* 指定输出文件夹 */
+//     // "rootDir": "./",                             /* 指定编译文件的根目录，编译器会在根目录查找入口文件 */
+//     // "composite": true,                           /* 是否编译构建引用项目 */
+//     // "tsBuildInfoFile": "./",                     /* 指定文件以存储增量编译信息 */
+//     // "removeComments": true,                      /* 指定是否将编译后的文件注释删掉，设为true的话即删除注释，默认为false */
+//     // "noEmit": true,                              /* 不生成编译文件 */
+//     // "importHelpers": true,                       /* 指定是否引入tslib里的复制工具函数，默认为false */
+//     // "downlevelIteration": true,                  /* 当target为"ES5"或"ES3"时，为"for-of" "spread"和"destructuring"中的迭代器提供完全支持 */
+//     // "isolatedModules": true,                     /* 指定是否将每个文件作为单独的模块，默认为true，他不可以和declaration同时设定 */
+
+//     /* 严格类型检查选项 */
+//     "strict": true /* 指定是否启动所有类型检查，默认为false */,
+//     // "noImplicitAny": true,                       /* 如果我们没有为一些值设置明确类型，编译器会默认认为这个值为any类型，如果设为true,则没有设置明确的类型会报错，默认值为false */
+//     // "strictNullChecks": true,                    /* 启用严格的空检查 */
+//     // "strictFunctionTypes": true,                 /* 启用对函数类型的严格检查 */
+//     // "strictBindCallApply": true,                 /* 对bind、call和apply绑定的方法的参数的检测是严格检测 */
+//     // "strictPropertyInitialization": true,        /* 启用类中属性初始化的严格检查，需要同时开启strictNullChecks，默认为false */
+//     // "noImplicitThis": true,                      /* 当this表达式的值为any类型的时候，生成一个错误 */
+//     // "alwaysStrict": true,                        /* 指定始终以严格模式检查每个模块，并且在编译之后的JS文件中加入"use strict"字符串 */
+
+//     /* 附加检查 */
+//     // "noUnusedLocals": true,                      /* 用于检查是否有定义了但是没有使用变量，默认值为false */
+//     // "noUnusedParameters": true,                  /* 用于检测是否在函数中没有使用的参数 */
+//     // "noImplicitReturns": true,                   /* 用于检查函数是否有返回值，设为true后，如果函数没有返回值则会提示，默认为false */
+//     // "noFallthroughCasesInSwitch": true,          /* 用于检查switch中是否有case没有使用break跳出switch,默认为false */
+//     // "noUncheckedIndexedAccess": true,            /* 在索引签名结果中包含“未定义” */
+//     // "noImplicitOverride": true,                  /* 确保用“override”修饰符标记派生类中的重写成员 */
+//     // "noPropertyAccessFromIndexSignature": true,  /* 需要索引签名中未声明的属性才能使用元素访问 */
+
+//     /* 模块分辨率选项 */
+//     // "moduleResolution": "node",                  /* 用于选择模块解析策略，有"node"和"classic"两种类型 */
+//     // "baseUrl": "./",                             /* 用于设置解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响 */
+//     // "paths": {},                                 /* 用于设置模块名到基于baseUrl的路径映射 */
+//     // "rootDirs": [],                              /* 指定一个路径列表，在构建时编译器会将这个路径中的内容都放到一个文件夹中 */
+//     // "typeRoots": [],                             /* 指定声明文件或文件夹的路径列表，如果指定了此项，则只有在这里列出的声明文件才会被加载 */
+//     // "types": [],                                 /* 指定需要包含的模块，只有在这里列出的模块的声明文件才会被加载 */
+//     // "allowSyntheticDefaultImports": true,        /* 指定允许从没有默认导出的模块中默认导入 */
+//     "esModuleInterop": true /* 通过导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性 */,
+//     // "preserveSymlinks": true,                    /* 不把符号链接解析为真实路径 */
+//     // "allowUmdGlobalAccess": true,                /* 允许从模块访问UMD globals */
+
+//     /* 源映射选项 */
+//     // "sourceRoot": "",                            /* 指定调试器应该定位TypeScript文件的位置，而不是源位置 */
+//     // "mapRoot": "",                               /* 指定调试器应该定位映射文件的位置，而不是生成的位置 */
+//     // "inlineSourceMap": true,                     /* 发射具有源贴图的单个文件，而不是具有单独的文件 */
+//     // "inlineSources": true,                       /* 在单个文件中沿源映射发射源；需要设置'--inlineSourceMap'或'--sourceMap' */
+
+//     /* 实验选项 */
+//     // "experimentalDecorators": true,              /* 启用对ES7装饰器的实验性支持 */
+//     // "emitDecoratorMetadata": true,               /* 启用对为装饰器发射类型元数据的实验性支持 */
+
+//     /* 高级选项 */
+//     "skipLibCheck": true /* 跳过声明文件的类型检查 */,
+//     "forceConsistentCasingInFileNames": true /* 不允许对同一文件的大小写不一致的引用 */
+//   }
+// }
